@@ -1,0 +1,70 @@
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame
+{   margin-top:75px;
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    height:700px;
+    border-style:groove;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgb(219, 198, 224);
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+}
+
+.screen
+{   
+    
+    width:400px;
+    height:150px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-bottom:5px;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+}
+.row1,.row2,.row3,.row4,.row5
+{
+    display:flex;
+    gap:10px;
+
+}
+.buttons
+{   font-size:25px;
+    width:100px;
+    height:75px;
+}
+.equal
+{
+    width:210px;
+}
+.screeno1
+{
+    font-size: 30px;
+    align-self:flex-end;
+    color:rgb(0, 0, 0);
+    word-wrap: break-word;
+}
+
+.screenbottom
+{   width:100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.screentop
+{
+    width:100%;
+    
+}
