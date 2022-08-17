@@ -19,7 +19,7 @@ body
     align-items: center;
     gap:20px;
     border-radius: 25px;
-    border-color:#14FFEC;
+    border-color:#cee0df;
     border-width: 2px;
     border-style: double;
 }
@@ -29,7 +29,7 @@ body
     
     width:400px;
     height:150px;
-    background-color:#14FFEC;
+    background-color:#dceceb;
     margin-top: 50px;
     margin-bottom:5px;
     display:flex;
@@ -46,12 +46,12 @@ body
     width:100px;
     height:75px;
     border-radius:15px;
-    border-color:#34b3b8;
+    border-color:#020303;
     border-style:groove;
     font-family: 'Roboto', monospace;
     border-width: 1px;
     
-    background-color: #34b3b8;
+    background-color: rgb(210, 224, 230);
 }
 .row1,.row2,.row3,.row4,.row5
 {
