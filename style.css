@@ -3,6 +3,8 @@ body
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color:#212121;
+    
 }
 .frame
 {   margin-top:75px;
@@ -10,14 +12,16 @@ body
     flex-direction: column;
     width:500px;
     height:700px;
-    border-style:groove;
-    border-color: black;
-    border-width: 1px;
-    background-color: rgb(219, 198, 224);
+   
+    background-color: #323232;
     align-self: center;
     justify-content: flex-start;
     align-items: center;
     gap:20px;
+    border-radius: 25px;
+    border-color:#14FFEC;
+    border-width: 2px;
+    border-style: double;
 }
 
 .screen
@@ -25,14 +29,29 @@ body
     
     width:400px;
     height:150px;
-    background-color: rgb(255, 255, 255);
+    background-color:#14FFEC;
     margin-top: 50px;
     margin-bottom:5px;
     display:flex;
     flex-direction: row;
     align-items: flex-end;
     flex-wrap: wrap;
+    border-radius: 10px;
     
+    
+}
+
+.buttons
+{   font-size:25px;
+    width:100px;
+    height:75px;
+    border-radius:15px;
+    border-color:#34b3b8;
+    border-style:groove;
+    font-family: 'Roboto', monospace;
+    border-width: 1px;
+    
+    background-color: #34b3b8;
 }
 .row1,.row2,.row3,.row4,.row5
 {
@@ -40,11 +59,7 @@ body
     gap:10px;
 
 }
-.buttons
-{   font-size:25px;
-    width:100px;
-    height:75px;
-}
+
 .equal
 {
     width:210px;
@@ -55,16 +70,29 @@ body
     align-self:flex-end;
     color:rgb(0, 0, 0);
     word-wrap: break-word;
+    
 }
 
 .screenbottom
 {   width:100%;
     display:flex;
     justify-content: flex-end;
+    padding:15px;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 .screentop
 {
     width:100%;
     
+}
+
+.footer
+{
+    position: absolute;
+    bottom:0;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-size: 20px;
 }

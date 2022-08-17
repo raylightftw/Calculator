@@ -73,32 +73,183 @@ three, user types one number, then operator, then types another number, then pre
 
 */
 
+plus.addEventListener('click',()=>{operator('+')});
+equal.addEventListener('click',()=>{operator('=')});
+multiply.addEventListener('click',()=>{operator('x')});
+minus.addEventListener('click',()=>{operator('-')});
+divide.addEventListener('click',()=>{operator('÷')});
+percent.addEventListener('click',()=>{operator('%')});
+decimal.addEventListener('click',()=>{decimalFunc('.')});
+
+
+function decimalFunc()
+{
+    var decTemp=document.createElement('div');
+    decTemp.classList.add('screeno1')
+    screenbottom.appendChild(decTemp);
+}
+
+
+
+
 function operator(operate)
 {
     var screenCheck=screenbottom.textContent;
     const symbols=['+','-','+','x'];
     operateTemp=document.createElement('div');
-    operateTemp.textContent=operate;
+    operateTemp.classList.add('screeno1');
+    operateTemp2=document.createElement('div');
+    operateTemp2.classList.add('screeno1');
     var num1;
     var num2;
     var total
-    if(screenCheck.some(ex=>screenCheck.includes(ex)))
+    var operatorPosition;
+
+    
+
+
+    if(screenCheck.includes('+'))
     {
         if(operate=="=")
         {   
             //addition
             operatorPosition=screenCheck.indexOf('+');
-            num1=screenCheck.slice(0,operatorPosition);
-            num2=screenCheck.slice(operatorPosition+1,screenCheck.length);  
-
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1+num2;
+            operateTemp.textContent=total;
+            screenbottom.innerHTML='';
+            screenbottom.appendChild(operateTemp);
         }
         else
         {
-            
+            operatorPosition=screenCheck.indexOf('+');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1+num2;
+            operateTemp.textContent=total;
+            operateTemp2.textContent=operate;
+            screenbottom.innerHTML="";
+            screenbottom.appendChild(operateTemp);
+            screenbottom.appendChild(operateTemp2);
+
         }
     }
+    else if(screenCheck.includes('x'))
+    {
+        if(operate=="=")
+        {   
+            //multiplication
+            operatorPosition=screenCheck.indexOf('x');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1*num2;
+            operateTemp.textContent=total;
+            screenbottom.innerHTML='';
+            screenbottom.appendChild(operateTemp);
+        }
+        else
+        {
+            operatorPosition=screenCheck.indexOf('x');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1*num2;
+            operateTemp.textContent=total;
+            operateTemp2.textContent=operate;
+            screenbottom.innerHTML="";
+            screenbottom.appendChild(operateTemp);
+            screenbottom.appendChild(operateTemp2);
+
+        }
+    }
+
+    else if(screenCheck.includes('-'))
+    {
+        if(operate=="=")
+        {   
+            //subtraction
+            operatorPosition=screenCheck.indexOf('-');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1-num2;
+            operateTemp.textContent=total;
+            screenbottom.innerHTML='';
+            screenbottom.appendChild(operateTemp);
+        }
+        else
+        {
+            operatorPosition=screenCheck.indexOf('-');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1-num2;
+            operateTemp.textContent=total;
+            operateTemp2.textContent=operate;
+            screenbottom.innerHTML="";
+            screenbottom.appendChild(operateTemp);
+            screenbottom.appendChild(operateTemp2);
+
+        }
+    }
+    else if(screenCheck.includes('%'))
+    {
+        if(operate=="=")
+        {   
+            //division
+            operatorPosition=screenCheck.indexOf('%');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1%num2;
+            operateTemp.textContent=total;
+            screenbottom.innerHTML='';
+            screenbottom.appendChild(operateTemp);
+        }
+        else
+        {
+            operatorPosition=screenCheck.indexOf('%');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1%num2;
+            operateTemp.textContent=total;
+            operateTemp2.textContent=operate;
+            screenbottom.innerHTML="";
+            screenbottom.appendChild(operateTemp);
+            screenbottom.appendChild(operateTemp2);
+
+        }
+    }
+
+    else if(screenCheck.includes('÷'))
+    {
+        if(operate=="=")
+        {   
+            //division
+            operatorPosition=screenCheck.indexOf('÷');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1/num2;
+            operateTemp.textContent=total;
+            screenbottom.innerHTML='';
+            screenbottom.appendChild(operateTemp);
+        }
+        else
+        {
+            operatorPosition=screenCheck.indexOf('÷');
+            num1=+screenCheck.slice(0,operatorPosition);
+            num2=+screenCheck.slice(operatorPosition+1,screenCheck.length);  
+            total=num1/num2;
+            operateTemp.textContent=total;
+            operateTemp2.textContent=operate;
+            screenbottom.innerHTML="";
+            screenbottom.appendChild(operateTemp);
+            screenbottom.appendChild(operateTemp2);
+
+        }
+    }
+
+
+
     else
-    {   
+    {   operateTemp.textContent=operate;
         screenbottom.appendChild(operateTemp);
     }
 }
